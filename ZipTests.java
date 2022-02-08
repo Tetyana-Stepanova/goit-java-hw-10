@@ -11,7 +11,7 @@ public class ZipTests {
 
         Stream<String> result = zip(first, second);
 
-        result.peek(System.out::println).collect(Collectors.toList());
+        result.forEach(System.out::println);
     }
 
     public static <T> Stream<T> zip(Stream<T> first, Stream<T> second) {
