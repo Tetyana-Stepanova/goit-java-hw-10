@@ -33,8 +33,7 @@ public class RandomStream {
                     r.getSeed(), x -> 1 * (r.getA() * x + r.getC()) % r.getM()
             );
             stream.limit(10)
-                    .peek(System.out::println)
-                    .collect(Collectors.toList());
+                    .forEach(System.out::println);
         }catch (Exception ex){
             System.out.println("You try to divide by zero!");
         }
